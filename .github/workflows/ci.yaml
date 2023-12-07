@@ -27,16 +27,18 @@ jobs:
         with:
           hugo-version: '0.119.0'
 
-      - name: Build
-        run: hugo --minify
+      #- name: Build
+      #  run: hugo --minify
 
       # configure gcloud `setup-gcloud` automatically
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v1'
         with:
-          workload_identity_provider: 'projects/967251621645/locations/global/workloadIdentityPools/github/providers/my-repo'
-          service_account: 'github-actions-service-account@static-resume-386719.iam.gserviceaccount.com'
+          workload_identity_provider: 'projects/967251621645/locations/global/workloadIdentityPools/github-final/providers/my-repo'
+          service_account: 'my-service-account@cloud-final-406619.iam.gserviceaccount.com'
+        
+        
 
       # upload files to GCS
       - id: 'upload-static-files'
