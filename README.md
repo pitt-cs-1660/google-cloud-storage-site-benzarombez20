@@ -66,3 +66,6 @@ The project is worth 15 points and the following rubric will be used to grade yo
   - `https://storage.googleapis.com/<your-bucket-name>/index.html`
 - You can use the following command to upload your assets to the Cloud Storage bucket before the GitHub Actions workflow is configured.
   - `gcloud storage cp . gs://<YOUR_STORAGE_BUCKET> -r`
+ 
+Load-Balancer IP:
+34.102.138.64:443
